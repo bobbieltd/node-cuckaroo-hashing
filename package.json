@@ -1,0 +1,17 @@
+{
+    "name": "cuckaroo-hashing",
+    "version": "3.0.5",
+    "main": "cuckaroo-hashing",
+    "author": {
+        "name": "sebseb7"
+    },
+    "license": "0bsd",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/swap-dev/node-cuckaroo-hashing.git"
+    },
+    "dependencies": {
+        "bindings": "*",
+        "nan":      "^2.8.0"
+    }
+}
