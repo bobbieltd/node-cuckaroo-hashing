@@ -1,4 +1,12 @@
 
+var bignum = require('bignum');
+
+function getdifficultyfromhash(hash)
+{
+	var diff1 = bignum('FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF', 16);
+	var hashNum = bignum.fromBuffer(hash.reverse());
+	return diff1.div(hashNum);
+}
 
 function addnoncetoheader(buf1,nonce)
 {
@@ -15,4 +23,5 @@ function addnoncetoheader(buf1,nonce)
 
 module.exports = require('bindings')('cuckaroo-hashing.node')
 module.exports.addnoncetoheader = addnoncetoheader;
+module.exports.getdifficultyfromhash = getdifficultyfromhash;
 
